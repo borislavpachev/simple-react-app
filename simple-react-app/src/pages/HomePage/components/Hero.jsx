@@ -5,11 +5,11 @@ export default function Hero() {
         <h1 className="font-semibold text-3xl md:text-5xl">JSON Placeholder</h1>
         <h2 className="text-2xl md:text-4xl text-orange-500">Simple App</h2>
       </div>
-      <div className="flex p-10 w-full md:w-1/2 justify-center items-center">
+      <div className="flex w-full md:w-1/2 p-10 justify-center items-center">
         <img
           src="/images/posts.svg"
           alt="Image of person looking at posts"
-          className="object-cover w-[300px] h-[300px]"
+          className="object-cover w-full md:w-3/4"
         />
       </div>
     </section>

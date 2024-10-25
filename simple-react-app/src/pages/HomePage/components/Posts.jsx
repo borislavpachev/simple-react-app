@@ -21,8 +21,7 @@ export default function Posts() {
       })
       .catch((error) => {
         console.log(error);
-      toast.error('Failed to get all posts.');
-
+        toast.error('Failed to get all posts.');
       })
       .finally(() => {
         setLoading(false);
@@ -41,15 +40,15 @@ export default function Posts() {
     <>
       <div className="flex flex-col border-2 rounded-lg p-10 border-orange-500 items-start justify-center">
         <h2 className="text-5xl mb-10">Check out our latest posts</h2>
-        <div className="flex w-full gap-3 justify-end">
+        <div className="flex flex-col md:flex-row w-full gap-3 justify-end">
           <Input
             id="posts-search-bar"
             name="posts-search-bar"
             placeholder="Search User"
-            type='search'
+            type="search"
             value={searchParam}
             onChange={handleSearch}
-            className="w-1/3"
+            className="w-full md:w-1/3"
           />
           <CreatePost setPosts={setPosts} />
         </div>
@@ -57,7 +56,7 @@ export default function Posts() {
         {!posts.length ? (
           <h2 className="mt-5 text-3xl">No posts</h2>
         ) : (
-          posts.map((post,index) => {
+          posts.map((post, index) => {
             return <SinglePost key={index} post={post} />;
           })
         )}
