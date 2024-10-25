@@ -40,7 +40,8 @@ export default function Posts() {
     <>
       <div className="flex flex-col border-2 rounded-lg p-10 border-orange-500 items-start justify-center">
         <h2 className="text-5xl mb-10">Check out our latest posts</h2>
-        <div className="flex flex-col md:flex-row w-full gap-3 justify-end">
+        <div className="flex flex-col md:flex-row w-full gap-3 justify-between">
+          <CreatePost setPosts={setPosts} />
           <Input
             id="posts-search-bar"
             name="posts-search-bar"
@@ -50,7 +51,6 @@ export default function Posts() {
             onChange={handleSearch}
             className="w-full md:w-1/3"
           />
-          <CreatePost setPosts={setPosts} />
         </div>
 
         {!posts.length ? (
