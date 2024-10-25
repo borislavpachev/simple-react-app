@@ -6,6 +6,7 @@ A simple React App that gets data from JSON Placeholder API
 
 ## Features
 
+- **Deployment**: https://simple-react-app-flame.vercel.app/
 - **Responsive UI**: Fully responsive design built with React and Tailwind CSS.
 - **Custom hooks**: For handling form state
 - **Conventional commits**: The commits are following conventional commits specification
