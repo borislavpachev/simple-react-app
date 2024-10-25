@@ -28,13 +28,13 @@ export default function Posts() {
       });
   }, [searchParam]);
 
-  if (loading) {
-    return <Loading />;
-  }
-
   const handleSearch = (e) => {
     setSearchParam(e.target.value);
   };
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <>
@@ -56,9 +56,12 @@ export default function Posts() {
         {!posts.length ? (
           <h2 className="mt-5 text-3xl">No posts</h2>
         ) : (
-          posts.map((post, index) => {
-            return <SinglePost key={index} post={post} />;
-          })
+          <>
+            {posts.map((post, index) => {
+              return <SinglePost key={index} post={post} />;
+            })}
+            <p className="mt-5 text-center w-full text-2xl">{`Posts: ${posts.length}`}</p>
+          </>
         )}
       </div>
     </>
