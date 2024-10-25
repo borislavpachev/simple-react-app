@@ -44,7 +44,7 @@ export default function CreatePost({ setPosts }) {
 
   return (
     <>
-      <Button className="w-[200px] p-3" onClick={() => setOpen(true)}>
+      <Button className="w-full md:w-1/6 p-3" onClick={() => setOpen(true)}>
         Create
       </Button>
       <Modal open={open} close={() => setOpen(false)}>
